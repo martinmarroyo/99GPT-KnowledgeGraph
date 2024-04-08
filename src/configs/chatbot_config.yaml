@@ -1,0 +1,17 @@
+chatbot:
+  page_config:
+    page_title: 99P Labs Blog Chatbot
+    layout: centered
+    initial_sidebar_state: auto
+    menu_items: null
+  messages: 
+    role: assistant
+    content: |
+      Ask me a question about the 99P Labs blog!
+
+      Please note that we will be collecting the queries and responses for research purposes. Additionally, since working with large language models is not always predictable, the chatbot may occasionally provide incorrect or nonsensical responses.
+  engine:
+    chat_mode: condense_question
+    verbose: True
+  chat_input_prompt: Your question
+  chat_generation_phrase: Thinking...

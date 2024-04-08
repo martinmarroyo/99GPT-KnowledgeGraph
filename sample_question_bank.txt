@@ -1,0 +1,19 @@
+Sample Questions
+
+Factual:
+What was the prompt given to Konomi Nakajima's capstone team project by 99P Labs?
+What key insights about CES 2024 are shared in the blog 'Software-defined ___.ai. Reflections on CES 2024'?
+Who authored the 'Software-defined ___.ai. Reflections on CES 2024' blog?
+When was 'Software-defined ___.ai. Reflections on CES 2024' posted?
+
+Thematic:
+How has the concept of smart mobility evolved according to the 99P Labs blogs?
+What are the recurring challenges in data analytics discussed across various 99P Labs blog posts?
+How do different blogs address the topic of sustainable mobility?
+What insights do the 99P Labs blogs provide on the future of autonomous vehicles?
+
+Interpretive:
+What can be inferred about the importance of data privacy in mobility research from the 99P Labs blogs?
+Based on the blogs, how might emerging technologies impact the future of urban transportation?
+What do the blogs suggest about the role of AI in enhancing vehicle safety and efficiency?
+How do the 99P Labs blogs collectively portray the relationship between technology and user experience in mobility?

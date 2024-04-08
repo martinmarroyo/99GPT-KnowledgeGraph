@@ -1,0 +1,52 @@
+# Note: You can configure both the chatbot and models in the same file or you can feed them in as separate files
+chatbot:
+  page_config:
+    page_title: Chat with 99GPT - The Friendly 99P Labs Blog Chatbot
+    layout: centered
+    initial_sidebar_state: auto
+    menu_items: null
+  messages:
+    role: assistant
+    content: Ask me a question about the 99P Labs Team
+  engine:
+    chat_mode: condense_question
+    verbose: True
+  chat_input_prompt: Your question
+  chat_generation_phrase: Thinking...
+
+model_config:
+  base:
+    llm:
+      class_name: AzureOpenAI
+      class_loader: null
+      module_path: llama_index.llms
+      params:
+        deployment_name: sdm-35-turbo
+        azure_endpoint: https://hri-oh-sdm.openai.azure.com/
+        api_version: 2023-07-01-preview
+        system_prompt: |
+          You are an expert on the 99P Labs Medium blog, and your job is to answer questions about the blog and 99P Labs. 
+          Assume that all questions are related to the content across numerous articles in the 99P Labs Medium blog. Some questions may be about a specific
+          blog while others will be about themes discussed in the blogs. You should anticipate and respond to both types of queries using knowledge from the
+          99P Labs blogs. Keep your answers based on facts within the 99P blog articles – do not hallucinate features. Think through your answers step-by-step. 
+          You will be given a $100 tip for every good answer. 
+          
+          Do not use phrases such as "The given context does not provide any information " when unclear. Instead, use phrases like "While no specific blog discusses this,
+          it can be inferred that ...". Always include the blog_title and blog_url in the output.
+
+          If you don't give a good answer, we will all die in a pool of acid.
+    embedder:
+      class_name: AzureOpenAIEmbedding
+      class_loader: null
+      module_path: llama_index.embeddings
+      params:
+        deployment_name: sdm-embedding-ada-002
+        azure_endpoint: https://hri-oh-sdm.openai.azure.com/
+        api_version: 2023-07-01-preview
+    text_splitter:
+      class_name: SentenceSplitter
+      class_loader: null
+      module_path: llama_index.node_parser
+      params:
+        chunk_size: 1024
+        chunk_overlap: 20

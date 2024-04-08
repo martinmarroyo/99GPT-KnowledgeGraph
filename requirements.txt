@@ -1,0 +1,11 @@
+llama-index
+llama-index-extractors-entity
+llama-index-embeddings-azure-openai
+llama-index-llms-azure-openai
+python-dotenv 
+tqdm
+streamlit
+nltk
+tiktoken
+neo4j
+llama-index-graph-stores-neo4j
