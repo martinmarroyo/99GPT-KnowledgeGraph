@@ -40,10 +40,10 @@ if __name__ == "__main__":
         config=RAGServiceConfig(config=config.model_config))
    # Knowledge Graph
     graph_store = Neo4jGraphStore(
-        username=st.secrets.neo4j_user,
-        password=st.secrets.neo4j_password,
-        url=st.secrets.neo4j_url,
-        database=st.secrets.neo4j_database
+        username=st.secrets["NEO4J_USER"],
+        password=st.secrets["NEO4J_PASSWORD"],
+        url=st.secrets["NEO4J_URL"],
+        database=st.secrets["NEO4J_DATABASE"]
     )
     storage_context = StorageContext.from_defaults(graph_store=graph_store)
     graph_rag_retriever = KnowledgeGraphRAGRetriever(
