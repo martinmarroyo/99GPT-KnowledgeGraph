@@ -22,7 +22,7 @@ def chatbot(config: Config) -> None:
     if st.session_state.messages[-1]["role"] != "assistant":
         with st.chat_message("assistant"):
             with st.spinner(config.chatbot.chat_generation_phrase):
-                response = st.session_state.chat_engine.chat(prompt)
+                response = st.session_state.chat_engine.query(prompt)
                 st.write(response.response)
                 message = {"role": "assistant", "content": response.response}
                 st.session_state.messages.append(message)
