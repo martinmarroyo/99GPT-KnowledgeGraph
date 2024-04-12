@@ -45,7 +45,7 @@ if __name__ == "__main__":
         url=st.secrets["NEO4J_URL"],
         database=st.secrets["NEO4J_DATABASE"]
     )
-    storage_context = StorageContext.from_defaults(graph_store=graph_store, service_context=RAGService.service_context)
+    storage_context = StorageContext.from_defaults(graph_store=graph_store)
     graph_rag_retriever = KnowledgeGraphRAGRetriever(
         storage_context=storage_context,
         verbose=True,
