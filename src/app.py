@@ -24,7 +24,7 @@ def chatbot(config: Config) -> None:
             with st.spinner(config.chatbot.chat_generation_phrase):
                 response = st.session_state.chat_engine.query(prompt)
                 st.write(response.response)
-                message = {"role": "assistant", "content": response}
+                message = {"role": "assistant", "content": response.response}
                 st.session_state.messages.append(message)
 
 
